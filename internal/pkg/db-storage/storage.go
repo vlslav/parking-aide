@@ -1,6 +1,7 @@
 package db_storage
 
+import "github.com/jmoiron/sqlx"
 
-func New() *Storage {
-	return &Storage{}
+func New(db *sqlx.DB) *Storage {
+	return &Storage{db: db}
 }

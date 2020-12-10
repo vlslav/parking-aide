@@ -54,7 +54,7 @@ func getTgToken() string {
 }
 
 func getTgBotAndUpdates(token string) (*tgbotapi.BotAPI, tgbotapi.UpdatesChannel) {
-	tgBot, err := tgbotapi.NewBotAPI("1448642189:AAG_x_nE4p1T5_AOuV-XFA0BiMSKDuw0myA")
+	tgBot, err := tgbotapi.NewBotAPI(token)
 	if err != nil {
 		log.Fatalf("can't create bot api: %v", err)
 	}
